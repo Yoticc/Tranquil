@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35506.116 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tranquil", "Tranquil\Tranquil.csproj", "{FCCFE1D3-97A4-4D4A-9E95-327ABF396678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCCFE1D3-97A4-4D4A-9E95-327ABF396678}.Debug|x64.ActiveCfg = Debug|x64
+		{FCCFE1D3-97A4-4D4A-9E95-327ABF396678}.Debug|x64.Build.0 = Debug|x64
+		{FCCFE1D3-97A4-4D4A-9E95-327ABF396678}.Release|x64.ActiveCfg = Release|x64
+		{FCCFE1D3-97A4-4D4A-9E95-327ABF396678}.Release|x64.Build.0 = Release|x64
+		{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}.Debug|x64.ActiveCfg = Debug|x64
+		{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}.Debug|x64.Build.0 = Debug|x64
+		{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}.Release|x64.ActiveCfg = Release|x64
+		{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
