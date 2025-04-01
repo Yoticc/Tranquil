@@ -20,8 +20,20 @@ public static class ProtobufDeserializer
 
             var fieldType = field.FieldType;
             if (fieldType == typeof(string)) field.SetValue(instance, stream.ReadString());
-            else if (fieldType == typeof(int)) field.SetValue(instance, stream.ReadVarInt());
+            else if (fieldType == typeof(int))
+            {
+                if (field.Name.StartsWith("Fixed32"))
+                    field.SetValue(instance, stream.Read<int>());
+                else field.SetValue(instance, stream.ReadVarInt());
+            }
+            else if (fieldType == typeof(uint))
+            {
+                if (field.Name.StartsWith("Fixed32"))
+                    field.SetValue(instance, stream.Read<uint>());
+                else field.SetValue(instance, stream.ReadVarUInt());
+            }
             else if (fieldType == typeof(long)) field.SetValue(instance, stream.ReadVarLong());
+            else if (fieldType == typeof(ulong)) field.SetValue(instance, stream.ReadVarULong());
             else if (fieldType == typeof(float)) field.SetValue(instance, stream.Read<float>());
             else if (fieldType == typeof(bool)) field.SetValue(instance, stream.Read<bool>());
             else if (fieldType.IsArray && fieldType.GetElementType() == typeof(byte))

@@ -1,5 +1,4 @@
-﻿namespace Tranquil.Schema.Demo;
-#pragma warning disable CS8618
+﻿namespace Tranquil.Schema;
 public record CDemoFileHeader
 (
     string DemoFileStamp,
@@ -66,4 +65,3 @@ public record CDemoRecovery(CDemoRecovery.DemoInitialSpawnGroupEntry InitialSpaw
 {
     public record DemoInitialSpawnGroupEntry(int SpawngroupHandle, bool WasCreated);
 }
-#pragma warning restore CS8618

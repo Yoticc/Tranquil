@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tranquil", "Tranquil\Tranqu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoToRecord", "ProtoToRecord\ProtoToRecord.csproj", "{9EE50AF9-D109-4555-9D1D-6EDC62B20DEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}.Debug|x64.Build.0 = Debug|x64
 		{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}.Release|x64.ActiveCfg = Release|x64
 		{F7997CF8-B695-4C2C-BD1C-2FD253FBF472}.Release|x64.Build.0 = Release|x64
+		{9EE50AF9-D109-4555-9D1D-6EDC62B20DEF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9EE50AF9-D109-4555-9D1D-6EDC62B20DEF}.Debug|x64.Build.0 = Debug|Any CPU
+		{9EE50AF9-D109-4555-9D1D-6EDC62B20DEF}.Release|x64.ActiveCfg = Release|Any CPU
+		{9EE50AF9-D109-4555-9D1D-6EDC62B20DEF}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

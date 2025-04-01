@@ -76,6 +76,8 @@ public unsafe class ProtobufStream
         return array;
     }
 
+    public uint ReadVarUInt() => unchecked((uint)ReadVarInt());
+
     public int ReadVarInt()
     {
         var pointer = this.pointer;
@@ -95,6 +97,8 @@ public unsafe class ProtobufStream
         this.pointer = pointer;
         return result;
     }
+
+    public ulong ReadVarULong() => unchecked((ulong)ReadVarLong());
 
     public long ReadVarLong()
     {
