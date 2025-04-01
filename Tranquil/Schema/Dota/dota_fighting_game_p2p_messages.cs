@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CMsgFightingGame_GameData_Fighting(int last_acked_frame, uint player_id, int last_crc_frame, uint last_crc_value, float now, float peer_ack_time, int input_start_frame, List<CMsgFightingGame_GameData_Fighting.InputSample> input_sample) : DotaPacket

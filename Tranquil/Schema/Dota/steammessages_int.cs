@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CMsgWebAPIKey(uint status, uint account_id, uint publisher_group_id, uint key_id, string domain) : DotaPacket;

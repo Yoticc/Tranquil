@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CGameNetworkingUI_GlobalState : DotaPacket;

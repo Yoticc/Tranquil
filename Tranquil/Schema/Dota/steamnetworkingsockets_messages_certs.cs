@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CMsgSteamNetworkingIdentityLegacyBinary(bool unused1, byte[] generic_bytes, string generic_string, byte[] ipv6_and_port, long SF2steam_id) : DotaPacket;

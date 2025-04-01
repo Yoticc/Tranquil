@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CDOTAMatchMetadataFile(int version, ulong match_id, CDOTAMatchMetadata metadata, bool unused4, byte[] private_metadata) : DotaPacket;

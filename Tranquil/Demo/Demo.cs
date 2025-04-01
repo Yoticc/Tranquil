@@ -1,5 +1,5 @@
 ﻿using Tranquil.IO;
-using Tranquil.Schema.Dota;
+using Tranquil.Schema;
 
 namespace Tranquil;
 public class Demo
@@ -8,6 +8,6 @@ public class Demo
     public Demo(byte[] bytes) : this(new ProtobufStream2(bytes)) { }
     public Demo(ProtobufStream stream) => DemoParser.Parse(this, stream);
 
-    public DemoPacketCollection DemoPackets = new DemoPacketCollection();
+    public DemoPackets DemoPackets = new DemoPackets();
     public List<DotaPacket> DotaPackets = new List<DotaPacket>();
 }

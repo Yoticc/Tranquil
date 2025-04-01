@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CMsgBotWorldState(uint team_id, float game_time, float dota_time, uint game_state, uint hero_pick_state, float time_of_day, float glyph_cooldown, float glyph_cooldown_enemy, bool unused9, List<CMsgBotWorldState.Player> players, List<CMsgBotWorldState.Unit> units, List<CMsgBotWorldState.DroppedItem> dropped_items, List<CMsgBotWorldState.RuneInfo> rune_infos, List<CMsgBotWorldState.TeleportInfo> incoming_teleports, List<CMsgBotWorldState.LinearProjectile> linear_projectiles, List<CMsgBotWorldState.AvoidanceZone> avoidance_zones, List<CMsgBotWorldState.Courier> couriers, bool unused18, bool unused19, List<CMsgBotWorldState.EventAbility> ability_events, List<CMsgBotWorldState.EventDamage> damage_events, List<CMsgBotWorldState.EventCourierKilled> courier_killed_events, List<CMsgBotWorldState.EventRoshanKilled> roshan_killed_events, List<CMsgBotWorldState.EventTree> tree_events, List<int> dropped_items_deltas, List<int> rune_infos_deltas) : DotaPacket

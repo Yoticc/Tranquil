@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CMsgSteamDatagramRelayAuthTicket(int SF1time_expiry, long SF2legacy_authorized_steam_id, int SF1authorized_public_ip, long SF2legacy_gameserver_steam_id, bool unused5, bool unused6, uint app_id, List<CMsgSteamDatagramRelayAuthTicket.ExtraField> extra_fields, int SF1legacy_gameserver_pop_id, uint virtual_port, byte[] gameserver_address, byte[] legacy_authorized_client_identity_binary, byte[] legacy_gameserver_identity_binary, string authorized_client_identity_string, string gameserver_identity_string) : DotaPacket

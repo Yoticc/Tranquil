@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public enum EBanContentCheckResult
@@ -61,7 +59,7 @@ public enum PartnerEventNotificationType
 public record CMsgIPAddress(int SF1v4, byte[] v6) : DotaPacket;
 public record CMsgIPAddressBucket(CMsgIPAddress original_ip_address, long SF2bucket) : DotaPacket;
 public record CMsgGCRoutingProtoBufHeader(ulong dst_gcid_queue, uint dst_gc_dir_index) : DotaPacket;
-public record CMsgProtoBufHeader(long SF2steamid, int client_sessionid, uint routing_appid, bool unused4, bool unused5, bool unused6, bool unused7, bool unused8, bool unused9, long SF2jobid_source, long SF2jobid_target, string target_job_name, int eresult, string error_message, uint ip, uint auth_account_flags, int transport_error, ulong messageid, uint publisher_group_id, uint sysid, ulong trace_tag, uint token_source, bool admin_spoofing_user, int seq_num, uint webapi_key_id, bool is_from_external_source, List<uint> forward_to_sysid, uint cm_sysid, byte[] ip_v6, uint launcher_type, uint realm, int timeout_ms) : DotaPacket
+public record CMsgProtoBufHeader(long SF2steamid, int client_sessionid, uint routing_appid, bool unused4, bool unused5, bool unused6, bool unused7, bool unused8, bool unused9, long SF2jobid_source, long SF2jobid_target, string target_job_name, int eresult, string error_message, uint ip, uint auth_account_flags, int transport_error, ulong messageid, uint publisher_group_id, uint sysid, ulong trace_tag, uint token_source, bool admin_spoofing_user, int seq_num, uint webapi_key_id, bool is_from_external_source, List<uint> forward_to_sysid, uint cm_sysid, byte[] ip_v6, uint launcher_type, uint realm, int timeout_ms, string debug_source, uint debug_source_string_index, ulong token_id, CMsgGCRoutingProtoBufHeader routing_gc, CMsgProtoBufHeader.ESessionDisposition session_disposition, string wg_token, string webui_auth_key) : DotaPacket
 {
     public enum ESessionDisposition
     {
@@ -78,7 +76,6 @@ public record CCuratorPreferences(uint supported_languages, bool platform_window
 public record CLocalizationToken(uint language, string localized_string) : DotaPacket;
 public record CClanEventUserNewsTuple(uint clanid, long SF2event_gid, long SF2announcement_gid, uint rtime_start, uint rtime_end, uint priority_score, uint type, uint clamp_range_slot, uint appid, uint rtime32_last_modified) : DotaPacket;
 public record CClanMatchEventByRange(uint rtime_before, uint rtime_after, uint qualified, List<CClanEventUserNewsTuple> events) : DotaPacket;
-public record CCommunity_ClanAnnouncementInfo(ulong gid, ulong clanid, ulong posterid, string headline, uint posttime, uint updatetime, string body, int commentcount, List<string> tags, int language, bool hidden, long SF2forum_topic_id, long SF2event_gid, int voteupcount, int votedowncount, EBanContentCheckResult ban_check_result, bool banned) : DotaPacket;
 public record CClanEventData(long SF2gid, long SF2clan_steamid, string event_name, EProtoClanEventType event_type, uint appid, string server_address, string server_password, uint rtime32_start_time, uint rtime32_end_time, int comment_count, long SF2creator_steamid, long SF2last_update_steamid, string event_notes, string jsondata, CCommunity_ClanAnnouncementInfo announcement_body, bool published, bool hidden, uint rtime32_visibility_start, uint rtime32_visibility_end, uint broadcaster_accountid, uint follower_count, uint ignore_count, long SF2forum_topic_id, uint rtime32_last_modified, long SF2news_post_gid, uint rtime_mod_reviewed, uint featured_app_tagid, List<uint> referenced_appids, uint build_id, string build_branch) : DotaPacket;
 public record CBilling_Address(string first_name, string last_name, string address1, string address2, string city, string us_state, string country_code, string postcode, int zip_plus4, string phone) : DotaPacket;
 public record CPackageReservationStatus(uint packageid, int reservation_state, int queue_position, int total_queue_size, string reservation_country_code, bool expired, uint time_expires, uint time_reserved) : DotaPacket;

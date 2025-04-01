@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record COAuthToken_ImplicitGrantNoPrompt_Request(string clientid) : DotaPacket;

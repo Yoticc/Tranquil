@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CMsgSurvivorsUserData(List<CMsgSurvivorsUserData.AttributeLevelsEntry> attribute_levels, uint unlocked_difficulty) : DotaPacket

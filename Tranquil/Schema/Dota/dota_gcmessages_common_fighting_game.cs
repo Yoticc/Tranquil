@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CMsgClientToGCFightingGameChallengeFriend(uint friend_account_id) : DotaPacket;

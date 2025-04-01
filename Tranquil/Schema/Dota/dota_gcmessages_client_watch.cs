@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CSourceTVGameSmall(uint activate_time, uint deactivate_time, ulong server_steam_id, ulong lobby_id, uint league_id, uint lobby_type, int game_time, uint delay, uint spectators, uint game_mode, uint average_mmr, ulong match_id, uint series_id, bool unused14, string team_name_radiant, string team_name_dire, uint sort_score, float last_update_time, int radiant_lead, uint radiant_score, uint dire_score, List<CSourceTVGameSmall.Player> players, int SF1building_state, long SF2team_logo_radiant, long SF2team_logo_dire, uint weekend_tourney_tournament_id, uint weekend_tourney_division, uint weekend_tourney_skill_level, uint weekend_tourney_bracket_round, uint team_id_radiant, uint team_id_dire, uint custom_game_difficulty, bool is_player_draft) : DotaPacket

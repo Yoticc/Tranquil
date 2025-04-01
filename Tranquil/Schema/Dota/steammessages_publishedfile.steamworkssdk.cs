@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CPublishedFile_Subscribe_Request(ulong publishedfileid, uint list_type, int appid, bool notify_client) : DotaPacket;

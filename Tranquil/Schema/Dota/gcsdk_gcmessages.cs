@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public enum ESourceEngine
@@ -102,6 +100,7 @@ public record CWorkshop_SetItemPaymentRules_Request(uint appid, uint gameitemid,
     public record PartnerItemPaymentRule(uint account_id, float revenue_percentage, string rule_description);
 }
 public record CWorkshop_SetItemPaymentRules_Response(List<string> validation_errors) : DotaPacket;
+public record CCommunity_ClanAnnouncementInfo(ulong gid, ulong clanid, ulong posterid, string headline, uint posttime, uint updatetime, string body, int commentcount, List<string> tags, int language, bool hidden, long SF2forum_topic_id) : DotaPacket;
 public record CCommunity_GetClanAnnouncements_Request(ulong steamid, uint offset, uint count, uint maxchars, bool strip_html, List<string> required_tags, bool require_no_tags, List<uint> language_preference, bool hidden_only, bool only_gid, uint rtime_oldest_date, bool include_hidden, bool include_partner_events) : DotaPacket;
 public record CCommunity_GetClanAnnouncements_Response(uint maxchars, bool strip_html, List<CCommunity_ClanAnnouncementInfo> announcements) : DotaPacket;
 public record CBroadcast_PostGameDataFrame_Request(uint appid, long SF2steamid, long SF2broadcast_id, byte[] frame_data) : DotaPacket;

@@ -1,6 +1,9 @@
 ﻿using ProtoToRecord;
 using System.Net;
-
+using Tranquil;
+using Tranquil.IO;
+using Tranquil.Schema;
+/*
 var directory = @"C:\Data\programming\vs projects\repos\Tranquil\Tranquil\Schema\Dota\";
 var baseUrl = "https://raw.githubusercontent.com/SteamDatabase/Protobufs/refs/heads/master/dota2/";
 string[] entries = 
@@ -97,16 +100,16 @@ foreach (var entry in entries)
 }
 
 _ = 3;
+*/
 
 
-/*
 const string path = @"C:\\Program Files\Steam\steamapps\common\dota 2 beta\game\dota\replays\8234860584.dem";
 var demo = new Demo(path);
 
+List<DotaPacket> packets = [];
 foreach (var packet in demo.DemoPackets.Packet)
 {
-    var bytes = packet.Data;
-    List<(int id, byte[] buffer)> packets = new List<(int id, byte[] buffer)>();
+    var bytes = packet.data;
     var reader = new DotaBitStream(bytes);
     while (reader.position < bytes.Length)
     {
@@ -114,23 +117,22 @@ foreach (var packet in demo.DemoPackets.Packet)
         var length = reader.ReadVarUint32();
 
         var buffer = reader.ReadBytes(length);
-
-        if (packetId == 4)
+        var type = DotaPacket.PacketTypes[packetId];
+        if (type != null)
         {
-            var b = new ProtobufStream2(buffer);
-            var a = ProtobufDeserializer.Deserialize<CNETMsg_Tick>(b);
-            _ = 3;
+            var stream = new ProtobufStream2(buffer);
+            var dotaPacket = ProtobufDeserializer.Deserialize(stream, type) as DotaPacket;
+            if (dotaPacket == null)
+                throw new Exception();
+            packets.Add(dotaPacket);
         }
-
-        packets.Add((packetId, buffer));
-        //Console.WriteLine($"{packetId} {length}");
+        //else Console.WriteLine($"unknown packet id {packetId}");
     }
 
     _ = 3;
 }
-*/
 
-
+_ = 3;
 
 /*
  

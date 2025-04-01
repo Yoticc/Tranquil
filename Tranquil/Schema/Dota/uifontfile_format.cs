@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CUIFontFilePB(string font_file_name, byte[] opentype_font_data) : DotaPacket;

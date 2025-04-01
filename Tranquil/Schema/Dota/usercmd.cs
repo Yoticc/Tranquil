@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CInButtonStatePB(ulong buttonstate1, ulong buttonstate2, ulong buttonstate3) : DotaPacket;

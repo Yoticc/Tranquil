@@ -1,5 +1,3 @@
-using Tranquil.Schema.Dota;
-
 namespace Tranquil.Schema;
 
 public record CMsgClientToGCPrivateChatInvite(string private_chat_channel_name, uint invited_account_id) : DotaPacket;

@@ -2,6 +2,7 @@
 using System.Buffers;
 using System.Reflection;
 using Tranquil.IO;
+using Tranquil.Schema;
 
 namespace Tranquil;
 public unsafe static class DemoParser
@@ -14,7 +15,7 @@ public unsafe static class DemoParser
         int size = default;
 
         var handlers =
-            typeof(DemoPacketCollection)
+            typeof(DemoPackets)
             .GetFields(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public)
             .Select(field => field.FieldType.IsGenericType ? (
                 packetType: field.FieldType.GenericTypeArguments[0],

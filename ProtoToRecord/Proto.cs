@@ -14,8 +14,6 @@ public class Proto
         var sb = new StringBuilder();
         int tab = 0;
 
-        Line("using Tranquil.Schema.Dota;");
-        Line();
         Line("namespace Tranquil.Schema;");
         Line();
 
@@ -311,7 +309,16 @@ public class ProtoMessage
             return Attribute == Attributes.Repeated ? $"List<{type}>" : type;
         }
 
-        static string[] prefixes = ["", "", "", "", "", "", "SS1", "SS2", "SF1", "SF2", "SSF1", "SSF2", "", "", "", ""];
+        static string[] prefixes = 
+        [
+            "", "", 
+            "", "", 
+            "", "", 
+            "SS1", "SS2", 
+            "SF1", "SF2", 
+            "SSF1", "SSF2", 
+            "", "", "", ""
+        ];
         static string[] blacknames = ["base", "event", "object", "base", "string", "private", "ref"];
         public string ToCSharpName()
         {
@@ -331,7 +338,13 @@ public class ProtoMessage
 
         public enum Types
         {
-            Double, Float, Int32, Int64, UInt32, UInt64, SInt32, SInt64, Fixed32, Fixed64, SFixed32, SFixed64, Bool, String, Bytes, Message
+            Double, Float, 
+            Int32, Int64, 
+            UInt32, UInt64, 
+            SInt32, SInt64, 
+            Fixed32, Fixed64, 
+            SFixed32, SFixed64, 
+            Bool, String, Bytes, Message
         }        
     }
 }

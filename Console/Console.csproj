@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProtoToRecord\ProtoToRecord.csproj" />
+    <ProjectReference Include="..\Tranquil\Tranquil.csproj" />
   </ItemGroup>
 
 </Project>
